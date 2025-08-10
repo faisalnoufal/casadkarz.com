@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Casa Dkarz Diecast - Coming Soon</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Casa Dkarz Diecast</h1>
+      <p class="address">Gandhi Nagar, Kadavanthra, Ernakulam, Kerala 682017</p>
+    </header>
+
+    <main>
+      <h2>COMING SOON</h2>
+
+            <!-- Lottie Animation -->
+      <div class="animation-container">
+        <lottie-player
+          src="animations/animation.json"
+          background="transparent"
+          speed="1"
+          loop
+          autoplay
+        ></lottie-player>
+      </div>
+      
+      <p class="tagline">We’re crafting something extraordinary! Stay tuned for the launch of our diecast collection.</p>
+      
+
+    </main>
+  </div>
+  
+  <script>
+    // Add a simple animation to the container on page load
+    document.addEventListener('DOMContentLoaded', function() {
+      const container = document.querySelector('.container');
+      container.style.opacity = '0';
+      container.style.transform = 'translateY(20px)';
+      
+      setTimeout(() => {
+        container.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+        container.style.opacity = '1';
+        container.style.transform = 'translateY(0)';
+      }, 100);
+      
+      // Add button click functionality
+      const notifyBtn = document.querySelector('.notify-btn');
+      if (notifyBtn) {
+        notifyBtn.addEventListener('click', function() {
+          // Simple alert for demonstration - in a real site, this would connect to a backend
+          alert('Thank you for your interest! We will notify you when we launch.');
+        });
+      }
+    });
+  </script>
+</body>
+</html>
